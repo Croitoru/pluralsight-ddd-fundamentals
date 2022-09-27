@@ -30,7 +30,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
       - "ASPNETCORE_URLS=http://+"
-    restart: on-failure
+    restart: Always
     depends_on:
       - rabbitmq
       - frontdesk-db
@@ -46,7 +46,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
       - "ASPNETCORE_URLS=http://+"
-    restart: on-failure
+    restart: Always
     depends_on:
       - frontdesk-api
 
@@ -70,7 +70,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
       - "ASPNETCORE_URLS=http://+"
-    restart: on-failure
+    restart: Always
     depends_on:
       - rabbitmq
       - clinicmanagement-db
@@ -86,7 +86,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
       - "ASPNETCORE_URLS=http://+"
-    restart: on-failure
+    restart: Always
     depends_on:
       - clinicmanagement-api
 
