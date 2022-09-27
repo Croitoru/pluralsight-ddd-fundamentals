@@ -29,7 +29,7 @@ services:
       - 5200:80
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
-      - "ASPNETCORE_URLS=http://+"
+      - "ASPNETCORE_URLS=http://192.168.1.158+"
     restart: Always
     depends_on:
       - rabbitmq
@@ -45,7 +45,7 @@ services:
       - 5100:80
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
-      - "ASPNETCORE_URLS=http://+"
+      - "ASPNETCORE_URLS=http://192.168.1.158+"
     restart: Always
     depends_on:
       - frontdesk-api
@@ -69,7 +69,7 @@ services:
       - 6200:80
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
-      - "ASPNETCORE_URLS=http://+"
+      - "ASPNETCORE_URLS=http://192.168.1.158+"
     restart: Always
     depends_on:
       - rabbitmq
@@ -85,7 +85,7 @@ services:
       - 6100:80
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
-      - "ASPNETCORE_URLS=http://+"
+      - "ASPNETCORE_URLS=http://192.168.1.158+"
     restart: Always
     depends_on:
       - clinicmanagement-api
@@ -106,7 +106,7 @@ services:
       - 7100:80
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
-      - "ASPNETCORE_URLS=http://+"
+      - "ASPNETCORE_URLS=http://192.168.1.158+"
     restart: on-failure
     depends_on:
       - rabbitmq
